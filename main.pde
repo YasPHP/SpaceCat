@@ -19,7 +19,7 @@ void setup()
   fullScreen();
   toys = new ArrayList();  //Array list for falling ellipses
   noCursor();
-  spacecat= loadImage ("spacecat.png");
+  spacecat= loadImage ("spacecat.png");   //downloads space images into gamescreen 
   space= loadImage ("realspace wallpaper.jpg");
   imageMode(CENTER);
   starterTime = frameCount; // coordinated frame count with timer
@@ -38,7 +38,7 @@ void draw(){
   drawTime();
 
  
- if (screen ==1) {
+ if (screen ==1) {    //screen switch from introductory scene to game screen 
    drawPhase1 ();
  }
  else if (screen == 2) {
@@ -51,7 +51,7 @@ void draw(){
 void drawPhase1(){
   background(255);
   textSize (100);
-    text ("SpaceCat", 400, 200);
+    text ("SpaceCat", 400, 200);      //introductory screen content
     textSize (50);
     text ("Creator: Yasmeen Hmaidan", 390, 300);
     textSize (40);
@@ -95,7 +95,7 @@ void drawPhase2 () {
   }
   else
   {
-    text("Meow, you lost! ",10,40);
+    text("Meow, you lost! ",10,40);   //final screen display of game over
     text("Meowtastic Score: " + score,10,100);
   }
 
@@ -124,7 +124,7 @@ void drawPhase2 () {
     x = tx;
     r = tr;
     speed = tspeed;
-    maxHealth = th;
+    maxHealth = th;   //health bar stats
     health = maxHealth;
   }
   
